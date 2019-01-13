@@ -18,7 +18,7 @@ pipeline {
         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws_cred',]]) {
           sh '''
               cd jenkins-packer-demo
-              aws s3 cp s3://terraform-state-whyimr30/amivar amivar.tf
+              aws s3 cp s3://terraform-state-whyimr30/amivar.tf amivar.tf
               touch mykey
               touch mykey.pub
               terraform apply -auto-approve -var APP_INSTANCE_COUNT=1
