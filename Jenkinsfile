@@ -21,7 +21,7 @@ pipeline {
               aws s3 cp s3://terraform-state-whyimr30/amivar.tf amivar.tf
               touch mykey
               touch mykey.pub
-              terraform apply -auto-approve -var APP_INSTANCE_COUNT=1
+              terraform apply -auto-approve -var APP_INSTANCE_COUNT=1 -target aws_instance.app-instance
           '''
         }
       }
