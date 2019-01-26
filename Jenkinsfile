@@ -23,7 +23,7 @@ pipeline {
               touch ~/.ssh/id_rsa.pub
               touch ~/.ssh/id_rsa
               terraform init
-              terraform apply -auto-approve -var APP_INSTANCE_COUNT=2 -target aws_instance.app-instance
+              terraform apply -auto-approve -var APP_INSTANCE_COUNT=1 -target aws_instance.app-instance
           '''
         }
       }
