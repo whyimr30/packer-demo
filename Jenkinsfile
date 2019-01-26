@@ -19,7 +19,7 @@ pipeline {
           sh '''
               cd jenkins-packer-demo
               aws s3 cp s3://terraform-state-whyimr30/amivar.tf amivar.tf
-              mkdir ~/.ssh/
+              mkdir -p ~/.ssh/
               touch ~/.ssh/id_rsa.pub
               touch ~/.ssh/id_rsa
               terraform init
